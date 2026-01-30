@@ -34,7 +34,7 @@ public class User
 
     public DateTime CreatedAt { get; set; }
 
-    public DateTime UpdateAd { get; set; }
+    public DateTime UpdateAt { get; set; }
 
     public UserProfile UserProfile { get; set; } = null!;
     public ICollection<UserRole> UserRoles { get; set; } =[];
