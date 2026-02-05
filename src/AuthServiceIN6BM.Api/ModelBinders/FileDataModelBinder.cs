@@ -6,7 +6,7 @@ namespace AuthServiceIN6BM.Api.ModelBinders;
 
 public class FileDataModelBinder : IModelBinder
 {
-    public Task BinModelAsync(ModelBindingContext bindingContext)
+    public Task BindModelAsync(ModelBindingContext bindingContext)
     {
         ArgumentNullException.ThrowIfNull(bindingContext);
 
