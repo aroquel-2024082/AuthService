@@ -39,7 +39,7 @@ public class FileDataModelBinderProvider : IModelBinderProvider
     {
         if(typeof(IFileData).IsAssignableFrom(context.Metadata.ModelType))
         {
-            return new FileDataModelBinde();
+            return new FileDataModelBinder();
         }
         return null;
     }

@@ -8,7 +8,15 @@ public class FormFileAdapter : IFileData
     private byte[]? _data;
     public FormFileAdapter(IFormFile formFile)
     {
-        ArgumentException.ThrowIfNullOrEmpty(formFile);
+        // Corregir error
+        ArgumentNullException.ThrowIfNull(formFile);
+
+        if (formFile.Length == 0)
+        {
+            throw new ArgumentException("El archivo está vacío", nameof(formFile));
+        }
+        //
+
         _formFile = formFile;
     }
 

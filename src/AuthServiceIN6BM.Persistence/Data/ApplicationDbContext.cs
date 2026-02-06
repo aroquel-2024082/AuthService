@@ -92,7 +92,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
                 .HasForeignKey<UserEmail>(ue => ue.UserId);
             entity.HasOne(e => e.UserPasswordReset)
                 .WithOne(upr => upr.User)
-                .HasForeignKey<UserEmail>(upr => upr.UserId);
+                .HasForeignKey<UserPasswordReset>(upr => upr.UserId);
         });
 
         // Configuración de UserProfile
